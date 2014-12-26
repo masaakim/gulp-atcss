@@ -1,6 +1,6 @@
 var gutil = require('gulp-util');
 var through = require('through2');
-var acss = require('acss');
+var Acss = require('acss');
 
 module.exports = function (options) {
     options = options || {};
@@ -17,7 +17,8 @@ module.exports = function (options) {
         }
 
         try {
-            file.contents = new Buffer(acss(file.contents.toString(), options));
+            var acss = new Acss(file.contents.toString());
+            file.contents = new Buffer(acss.process(file.contents.toString()));
             this.push(file);
         } catch (err) {
             this.emit('error', new gutil.PluginError('gulp-acss', err, {fileName: file.path}));
