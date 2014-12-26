@@ -1,14 +1,26 @@
-# gulp-acss [![Build Status](https://travis-ci.org/morishitter/gulp-acss.svg)](https://travis-ci.org/morishitter/gulp-acss)
+# [gulp](http://gulpjs.com)-acss [![Build Status](https://travis-ci.org/morishitter/gulp-acss.svg)](https://travis-ci.org/morishitter/gulp-acss)
 
-gulp plugin for ACSS
+> [ACSS](https://github.com/morishitter/acss) - Annotations based CSS processor
 
-## Installation
 
-```shell
-$ npm install gulp-acss
+## Install
+
+```sh
+$ npm install --save-dev gulp-myth
 ```
 
-## Example
+## Usage
+
+```js
+var gulp = require('gulp');
+var myth = require('gulp-acss');
+
+gulp.task('default', function () {
+  return gulp.src('src/app.css')
+    .pipe(acss())
+    .pipe(gulp.dest('dist'));
+});
+```
 
 ## License
 
