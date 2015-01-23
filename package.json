@@ -18,11 +18,11 @@
   "license": "MIT",
   "dependencies": {
     "through2": "^0.6.3",
-    "gulp": "^3.8.10",
     "acss": "^0.4.0",
     "gulp-util": "^3.0.1"
   },
   "devDependencies": {
+    "gulp": "^3.8.10",
     "mocha": "^2.1.0"
   }
 }
