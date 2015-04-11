@@ -1,25 +1,25 @@
 {
-  "name": "gulp-acss",
-  "version": "0.1.1",
-  "description": "gulp plugin for ACSS",
+  "name": "gulp-atcss",
+  "version": "0.2.0",
+  "description": "gulp plugin for AtCSS",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/morishitter/gulp-acss/git"
+    "url": "git://github.com/morishitter/gulp-atcss/git"
   },
   "keywords": [
     "gulpplugin",
-    "acss"
+    "atcss"
   ],
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
-    "through2": "^0.6.3",
-    "acss": "^0.4.0",
-    "gulp-util": "^3.0.1"
+    "atcss": "^1.0.0",
+    "gulp-util": "^3.0.1",
+    "through2": "^0.6.3"
   },
   "devDependencies": {
     "gulp": "^3.8.10",

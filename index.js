@@ -1,6 +1,6 @@
 var gutil = require('gulp-util');
 var through = require('through2');
-var Acss = require('acss');
+var Atcss = require('atcss');
 
 module.exports = function (options) {
     options = options || {};
@@ -12,16 +12,16 @@ module.exports = function (options) {
         }
 
         if (file.isStream()) {
-            cb(new gutil.PluginError('gulp-acss', 'Streaming not supported'));
+            cb(new gutil.PluginError('gulp-atcss', 'Streaming not supported'));
             return;
         }
 
         try {
-            var acss = new Acss(file.contents.toString());
-            file.contents = new Buffer(acss.process(file.contents.toString()));
+            var atcss = new Atcss(file.contents.toString());
+            file.contents = new Buffer(atcss.process(file.contents.toString()));
             this.push(file);
         } catch (err) {
-            this.emit('error', new gutil.PluginError('gulp-acss', err, {fileName: file.path}));
+            this.emit('error', new gutil.PluginError('gulp-atcss', err, {fileName: file.path}));
         }
 
         cb();

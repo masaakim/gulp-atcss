@@ -1,23 +1,23 @@
-# [gulp](http://gulpjs.com)-acss [![Build Status](https://travis-ci.org/morishitter/gulp-acss.svg)](https://travis-ci.org/morishitter/gulp-acss)
+# [gulp](http://gulpjs.com)-atcss [![Build Status](https://travis-ci.org/morishitter/gulp-atcss.svg)](https://travis-ci.org/morishitter/gulp-atcss)
 
-> [ACSS](https://github.com/morishitter/acss) - Annotations based CSS processor
+> [AtCSS](https://github.com/morishitter/atcss) - Annotations based CSS processor
 
 
 ## Install
 
 ```sh
-$ npm install --save-dev gulp-myth
+$ npm install --save-dev gulp-atcss
 ```
 
 ## Usage
 
 ```js
 var gulp = require('gulp');
-var myth = require('gulp-acss');
+var atcss = require('gulp-atcss');
 
 gulp.task('default', function () {
   return gulp.src('src/app.css')
-    .pipe(acss())
+    .pipe(atcss())
     .pipe(gulp.dest('dist'));
 });
 ```

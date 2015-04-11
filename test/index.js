@@ -1,14 +1,14 @@
 var fs = require('fs');
 var assert = require('assert');
 var gutil = require('gulp-util');
-var Acss = require('acss');
-var gulpAcss = require('../');
+var Atcss = require('atcss');
+var gulpAtcss = require('../');
 
-it('should process CSS using ACSS', function (cb) {
-    var stream = gulpAcss();
-    var acssFile = fs.readFileSync('test/fixtures/acss.css', 'utf-8');
-    var acss = new Acss(acssFile);
-    var output = acss.process(acssFile);
+it('should process CSS using AtCSS', function (cb) {
+    var stream = gulpAtcss();
+    var atcssFile = fs.readFileSync('test/fixtures/atcss.css', 'utf-8');
+    var atcss = new Atcss(atcssFile);
+    var output = atcss.process(atcssFile);
 
     stream.on('data', function (file) {
         assert.equal(file.contents.toString(), output);
@@ -17,6 +17,6 @@ it('should process CSS using ACSS', function (cb) {
 
     stream.write(new gutil.File({
         //path: __dirname + '/fixture.css',
-        contents: new Buffer(acssFile)
+        contents: new Buffer(atcssFile)
     }));
 });
